@@ -4,13 +4,25 @@
     padding: 0;
 }
 
-section{
+section span:first-of-type{
     background-image: linear-gradient(to right top, #cacc 25%, #ACACC9 25% , #ACACC9 75%, #cacc 75%);
-    height: 100vh;
+}
+
+section span:last-of-type{
+    color: transparent;
+    background-image: url(My\ Mom.jpeg);
+    background-size: 100px;
+    background-clip: text;
+}
+
+section h2{
+    font-size: 6rem;
+}
+section{
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 img{
@@ -88,3 +100,4 @@ ol li{
 ol li:last-of-type{
     grid-column: span 2;
 }
+

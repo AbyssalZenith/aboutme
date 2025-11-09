@@ -1,11 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Information</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Information</title>
+        <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-    
+    <nav>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./timetable.html">Time Table</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <h1 class="page-title">Contact Details</h1>
+
+        <form class="contact-form" novalidate>
+            <fieldset>
+                <legend>Contact Form</legend>
+                <ul class="form-list">
+                    <li>
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </li>
+
+                    <li>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </li>
+
+                    <li>
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </li>
+
+                    <li>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </li>
+
+                    <li>
+                        <label for="state">State of Origin</label>
+                        <select id="state" name="state">
+                            <optgroup label="West">
+                                <option value="california">California</option>
+                                <option value="oregon">Oregon</option>
+                                <option value="washington">Washington</option>
+                            </optgroup>
+                            <optgroup label="Midwest">
+                                <option value="illinois" selected>Illinois</option>
+                                <option value="ohio">Ohio</option>
+                                <option value="michigan">Michigan</option>
+                            </optgroup>
+                            <optgroup label="South">
+                                <option value="texas">Texas</option>
+                                <option value="florida">Florida</option>
+                                <option value="georgia">Georgia</option>
+                            </optgroup>
+                            <optgroup label="Northeast">
+                                <option value="newyork">New York</option>
+                                <option value="massachusetts">Massachusetts</option>
+                                <option value="pennsylvania">Pennsylvania</option>
+                            </optgroup>
+                        </select>
+                    </li>
+
+                    <li>
+                        <span class="label-inline">Gender</span>
+                        <label class="radio"><input type="radio" id="male" name="gender" value="male"> Male</label>
+                        <label class="radio"><input type="radio" id="female" name="gender" value="female"> Female</label>
+                        <label class="radio"><input type="radio" id="prefer-not-to-say" name="gender" value="prefer-not-to-say" checked> Prefer not to say</label>
+                    </li>
+
+                    <li>
+                        <span class="label-inline">Programming Languages</span>
+                        <label class="checkbox"><input type="checkbox" id="html" name="programming-languages[]" value="html" checked> HTML</label>
+                        <label class="checkbox"><input type="checkbox" id="css" name="programming-languages[]" value="css" checked> CSS</label>
+                        <label class="checkbox"><input type="checkbox" id="javascript" name="programming-languages[]" value="javascript" checked> JavaScript</label>
+                        <label class="checkbox"><input type="checkbox" id="python" name="programming-languages[]" value="python"> Python</label>
+                        <label class="checkbox"><input type="checkbox" id="java" name="programming-languages[]" value="java"> Java</label>
+                        <label class="checkbox"><input type="checkbox" id="csharp" name="programming-languages[]" value="csharp"> C#</label>
+                        <label class="checkbox"><input type="checkbox" id="ruby" name="programming-languages[]" value="ruby"> Ruby</label>
+                        <label class="checkbox"><input type="checkbox" id="php" name="programming-languages[]" value="php"> PHP</label>
+                    </li>
+
+                    <li>
+                        <button type="submit" class="btn-primary">Submit</button>
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+    </main>
 </body>
 </html>
