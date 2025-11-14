@@ -4,8 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Table Schedule</title>
+        <!-- Tailwind CSS via CDN (for quick local styling) -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="Isabel.css">
 </head>
 <body>
-    
+    <div class="min-h-screen bg-grey-50 py-10 px-4">
+        <div class="max-w-5xl mx-auto"><h1 class="text-center bg-blue-800 text-white py-10 px-4 text-3xl ">Time Table Schedule</h1>
+
+            <div class="mt-8 overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200 bg-white rounded-lg shadow-lg overflow-hidden">
+                    <caption class="text-left text-sm text-gray-500 p-4">Weekly class schedule — responsive and accessible</caption>
+                    <thead class="bg-gradient-to-r from-indigo-50 to-purple-50">
+                        <tr class="text-left text-sm font-medium text-gray-700">
+                            <th class="px-6 py-3">Time</th>
+                            <th class="px-6 py-3">Monday</th>
+                            <th class="px-6 py-3">Tuesday</th>
+                            <th class="px-6 py-3">Wednesday</th>
+                            <th class="px-6 py-3">Thursday</th>
+                            <th class="px-6 py-3">Friday</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm text-gray-600">
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 font-semibold text-gray-800">9:00 - 10:00</td>
+                            <td class="px-6 py-4 bg-indigo-50 text-indigo-800">Math</td>
+                            <td class="px-6 py-4 bg-yellow-50 text-yellow-800">English</td>
+                            <td class="px-6 py-4 bg-green-50 text-green-800">Science</td>
+                            <td class="px-6 py-4 bg-orange-50 text-orange-800">History</td>
+                            <td class="px-6 py-4 bg-pink-50 text-pink-800">Physical Education</td>
+                        </tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100">
+                            <td class="px-6 py-4 font-semibold text-gray-800">10:00 - 11:00</td>
+                            <td class="px-6 py-4 bg-rose-50 text-rose-800">Art</td>
+                            <td class="px-6 py-4 bg-indigo-50 text-indigo-800">Math</td>
+                            <td class="px-6 py-4 bg-yellow-50 text-yellow-800">English</td>
+                            <td class="px-6 py-4 bg-green-50 text-green-800">Science</td>
+                            <td class="px-6 py-4 bg-orange-50 text-orange-800">History</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 font-semibold text-gray-800">11:00 - 12:00</td>
+                            <td class="px-6 py-4 bg-pink-50 text-pink-800">Physical Education</td>
+                            <td class="px-6 py-4 bg-rose-50 text-rose-800">Art</td>
+                            <td class="px-6 py-4 bg-indigo-50 text-indigo-800">Math</td>
+                            <td class="px-6 py-4 bg-yellow-50 text-yellow-800">English</td>
+                            <td class="px-6 py-4 bg-green-50 text-green-800">Science</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <td colspan="6" class="px-6 py-4 text-sm text-gray-500 text-center">End of Schedule</td>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,30 @@
+{
+  "name": "chill",
+  "version": "1.0.0",
+  "description": "fundamentals of tailwindcss",
+  "keywords": [
+    "css",
+    "html",
+    "tailwindcss"
+  ],
+  "homepage": "https://github.com/AbyssalZenith/aboutme#readme",
+  "bugs": {
+    "url": "https://github.com/AbyssalZenith/aboutme/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbyssalZenith/aboutme.git"
+  },
+  "license": "ISC",
+  "author": "Isabel Rufai",
+  "type": "commonjs",
+  "main": "script.js",
+  "scripts": {
+    "fr": "npx @tailwindcss/cli -i ./input.css -o ./Isabel.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "tailwindcss": "^4.1.17"
+  }
+}
