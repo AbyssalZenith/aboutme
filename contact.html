@@ -21,25 +21,70 @@
             <fieldset>
                 <legend>Contact Form</legend>
                 <ul class="form-list">
-                    <li>
-                        <label for="username">Username</label>
-                        <input type="text" id="username" name="username" required>
-                    </li>
+                                        <li>
+                                                <label for="username">Username</label>
+                                                <!-- Requirement: exactly 5 characters where the last two characters are digits.
+                                                         Assumption: first three characters are alphabetic letters (A-Z, a-z). -->
+                                                <input
+                                                    type="text"
+                                                    id="username"
+                                                    name="username"
+                                                    required
+                                                    minlength="5"
+                                                    maxlength="5"
+                                                    pattern="^[A-Za-z]{3}\d{2}$"
+                                                    title="Exactly 5 characters: first three letters (A–Z), followed by two digits."
+                                                >
+                                                   <div class="req-list" id="username-reqs" aria-live="polite">
+                                                       <p class="req-item not-met" id="u-exact">Exactly 5 characters</p>
+                                                       <p class="req-item not-met" id="u-first3">First 3 characters are letters (A–Z)</p>
+                                                       <p class="req-item not-met" id="u-last2">Last 2 characters are digits (0–9)</p>
+                                                   </div>
+                                        </li>
 
                     <li>
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" required>
                     </li>
 
-                    <li>
-                        <label for="dob">Date of Birth</label>
-                        <input type="date" id="dob" name="dob" required>
-                    </li>
+                                        <li>
+                                                <label for="dob">Date of Birth</label>
+                                                <!-- DOB restricted between 2005 and 2015 inclusive -->
+                                                <input
+                                                    type="date"
+                                                    id="dob"
+                                                    name="dob"
+                                                    required
+                                                    min="2005-01-01"
+                                                    max="2015-12-31"
+                                                    title="Enter a date between 2005 and 2015."
+                                                >
+                                                   <div class="req-list" id="dob-reqs" aria-live="polite">
+                                                       <p class="req-item not-met" id="d-range">Date between 2005 and 2015</p>
+                                                   </div>
+                                        </li>
 
-                    <li>
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" required>
-                    </li>
+                                        <li>
+                                                <label for="password">Password</label>
+                                                <!-- Requirements: 6-8 chars, at least one uppercase, one lowercase, one digit; letters and numbers only -->
+                                                <input
+                                                    type="password"
+                                                    id="password"
+                                                    name="password"
+                                                    required
+                                                    minlength="6"
+                                                    maxlength="8"
+                                                    pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{6,8}"
+                                                    title="6–8 characters, must include at least one uppercase letter, one lowercase letter, and one number. Letters and digits only."
+                                                >
+                                                   <div class="req-list" id="password-reqs" aria-live="polite">
+                                                       <p class="req-item not-met" id="p-uppercase">Contains an uppercase letter</p>
+                                                       <p class="req-item not-met" id="p-lowercase">Contains a lowercase letter</p>
+                                                       <p class="req-item not-met" id="p-digit">Contains a number</p>
+                                                       <p class="req-item not-met" id="p-length">6–8 characters long</p>
+                                                       <p class="req-item not-met" id="p-chars">Letters and digits only (no symbols)</p>
+                                                   </div>
+                                        </li>
 
                     <li>
                         <label for="state">State of Origin</label>
@@ -89,9 +134,19 @@
                     <li>
                         <button type="submit" class="btn-primary">Submit</button>
                     </li>
+                    
+                    <li>
+                        <label for="image-upload">Upload profile image</label>
+                        <!-- preview box will show the selected image -->
+                        <input type="file" id="image-upload" name="image" accept="image/*">
+                        <div id="image-preview" class="preview-box" aria-live="polite">
+                            <span class="preview-placeholder">No image selected</span>
+                        </div>
+                    </li>
                 </ul>
             </fieldset>
         </form>
     </main>
+    <script src="script.js" defer></script>
 </body>
 </html>

@@ -89,6 +89,42 @@ input:focus, select:focus{ border-color: var(--accent); box-shadow: 0 0 0 6px rg
 /* small helper spacing for groups */
 .radio, .checkbox{ margin-bottom: 0.35rem; }
 
+/* inline validation messages */
+.field-error{
+  color: #c62828;
+  font-size: 0.92rem;
+  margin-top: 0.35rem;
+}
+.field-success{
+  color: #2e7d32;
+  font-weight: 600;
+  margin-top: 0.85rem;
+}
+
+/* requirement list styling */
+.req-list{ margin-top: 0.5rem; display: grid; gap: 0.25rem; }
+.req-item{ font-size: 0.92rem; display: flex; align-items: center; gap: 0.5rem; }
+.req-item::before{ content: "✖"; color: #c62828; font-weight: 700; }
+.req-item.met::before{ content: "✔"; color: #2e7d32; }
+.req-item.met{ color: #2e7d32; }
+.req-item.not-met{ color: #c62828; }
+
+/* image preview box */
+.preview-box{
+  width: 150px;
+  height: 150px;
+  border: 2px dashed #e6e9f2;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+.preview-box img{ width: 100%; height: 100%; object-fit: cover; display: block; }
+.preview-placeholder{ color: var(--muted); font-size: 0.9rem; text-align: center; padding: 0.5rem; }
+
 /* Navigation (copied from site-wide styles so contact page matches index) */
 nav ul{
   display: flex;
